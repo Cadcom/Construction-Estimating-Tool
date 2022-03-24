@@ -113,7 +113,7 @@ namespace CET.Api.Controllers
         [HttpGet]
         [Route("GetEstimateByID")]
         [Authorize(Roles = Role.Read)]
-        [ResponseCache(Duration = 60 * 60 * 24, Location = ResponseCacheLocation.Any, VaryByQueryKeys = new[] { "IlID" })]
+        [ResponseCache(Duration = 60 * 60 * 24, Location = ResponseCacheLocation.Any, VaryByQueryKeys = new[] { "id" })]
 
         public async Task<IActionResult> GetEstimateByIDAsync(long id)
         {
@@ -130,7 +130,7 @@ namespace CET.Api.Controllers
         [HttpGet]
         [Route("GetEstimateByID")]
         [Authorize(Roles = Role.Read)]
-        [ResponseCache(Duration = 60 * 60 * 24, Location = ResponseCacheLocation.Any, VaryByQueryKeys = new[] { "IlID" })]
+        [ResponseCache(Duration = 60 * 60 * 24, Location = ResponseCacheLocation.Any, VaryByQueryKeys = new[] { "id", "page", "size" })]
 
         public IActionResult GetUserEstimatesByIDAsync(long id, int page = 1, int size = 20)
         {

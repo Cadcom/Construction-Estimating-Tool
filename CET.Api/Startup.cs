@@ -62,6 +62,7 @@ namespace CET.Api
             services.AddScoped<IDatabaseHelper, DatabaseHelper>();
             services.AddScoped<ICETService, CETService>();
             services.AddControllers();
+            services.AddResponseCaching();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "CET.Api", Version = "v1" });
@@ -79,7 +80,7 @@ namespace CET.Api
             }
 
             app.UseHttpsRedirection();
-
+            app.UseResponseCaching();
             app.UseRouting();
 
             app.UseAuthentication();

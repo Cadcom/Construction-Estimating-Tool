@@ -14,6 +14,8 @@ Asp.Net Core 5.0 Construction Estimating Tool
 
 5. The Swagger library is used to visualize the structure of the Web API.
 
+6. ResponseCaching added for scalable RestAPI.
+
 ![image](https://user-images.githubusercontent.com/16004784/159958691-f5cc96b3-67c7-41a3-9f4e-c67c0bf3457f.png)
 
 ![image](https://user-images.githubusercontent.com/16004784/159960454-af0c59b9-e01c-4e9c-b5ae-a6958d612c25.png)
